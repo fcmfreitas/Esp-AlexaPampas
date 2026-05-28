@@ -1,6 +1,6 @@
 # ESP32 - Automação Residencial (Alexa dos Pampas)
 
-Este projeto implementa um sistema de automação residencial para o ESP32. Ele permite o controle de um relé, um servo motor e de um LED via MQTT (integrável com um aplicativo mobile que desenvolvi em Flutter), além de realizar o monitoramento de temperatura e umidade usando um sensor DHT22. 
+Este projeto implementa um sistema de automação residencial para o ESP32. Ele permite o controle de um relé, um servo motor e de um LED via MQTT, integrável com o **[aplicativo mobile desenvolvido em Flutter](https://github.com/fcmfreitas/alexa_iot)**, além de realizar o monitoramento de temperatura e umidade usando um sensor DHT22. 
 
 O projeto conta com um **Portal Cativo (Captive Portal)** utilizando SPIFFS para a configuração inicial das credenciais de Wi-Fi, eliminando a necessidade de *hardcode* de senhas no código-fonte. A leitura dos sensores é gerenciada de forma assíncrona através de uma *Task* do **FreeRTOS**.
 
@@ -23,3 +23,9 @@ O sistema se conecta ao broker público `broker.emqx.io` (porta 1883) com os seg
 | **Comando Servo**| `PAMPA-RS/IOT/ALEXA_SERVO` | `abre` / `fecha` |
 | **Leitura Temp.**| `PAMPA-RS/IOT/ALEXA_TEMP` | *Ex: 25.4* (Publicado pelo ESP32) |
 | **Leitura Umid.**| `PAMPA-RS/IOT/ALEXA_HUMID`| *Ex: 60.0* (Publicado pelo ESP32) |
+
+## 🔗 Repositório do Aplicativo Mobile (Flutter)
+
+Para controlar este hardware através de comandos de voz híbridos (Vosk + Google Speech-to-Text) ou por uma interface de controle remoto manual dedicada, utilize o aplicativo mobile desenvolvido para este projeto:
+
+👉 **[Acessar o código do Aplicativo Flutter (alexa_iot)](https://github.com/fcmfreitas/alexa_iot)**
