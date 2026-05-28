@@ -1,6 +1,6 @@
 # ESP32 - Automação Residencial (Alexa dos Pampas)
 
-Este projeto implementa um sistema de automação residencial para o ESP32. Ele permite o controle de um relé, um servo motor e de um LED via MQTT (integrável com a Alexa ou Home Assistant), além de realizar o monitoramento de temperatura e umidade usando um sensor DHT22. 
+Este projeto implementa um sistema de automação residencial para o ESP32. Ele permite o controle de um relé, um servo motor e de um LED via MQTT (integrável com um aplicativo mobile que desenvolvi em Flutter), além de realizar o monitoramento de temperatura e umidade usando um sensor DHT22. 
 
 O projeto conta com um **Portal Cativo (Captive Portal)** utilizando SPIFFS para a configuração inicial das credenciais de Wi-Fi, eliminando a necessidade de *hardcode* de senhas no código-fonte. A leitura dos sensores é gerenciada de forma assíncrona através de uma *Task* do **FreeRTOS**.
 
